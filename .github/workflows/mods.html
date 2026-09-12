@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cinematic Editor &amp; Mason — Minecraft 1.8.9</title>
+<meta name="description" content="Two free, open source Forge mods for Minecraft 1.8.9: a camera and replay editor, and a visual world editor.">
+<link rel="stylesheet" href="mods.css">
+</head>
+<body>
+
+<header class="top">
+	<div class="wrap">
+		<a class="back" href="index.html">&larr; All projects</a>
+		<span class="brand">Minecraft 1.8.9 · Forge</span>
+		<nav>
+			<a href="#cineditor">Cinematic Editor</a>
+			<a href="#mason">Mason</a>
+			<a href="#about">About</a>
+		</nav>
+	</div>
+</header>
+
+<section class="hero">
+	<div class="wrap">
+		<h1>Two tools for 1.8.9</h1>
+		<p>
+			A camera and replay editor for filming, and a visual world editor for building.
+			Free, open source, and written from scratch for a version everyone else stopped supporting.
+		</p>
+
+		<div class="notice">
+			<strong>Early and largely untested.</strong>
+			Both mods were built for one person's own use. They compile and each release was reasoned
+			through carefully, but most of the behaviour has never been verified in a running game.
+			Expect rough edges, and back up any world you care about before using Mason.
+		</div>
+	</div>
+</section>
+
+<!-- ============================================================ Cinematic Editor -->
+
+<section class="mod" id="cineditor">
+	<div class="wrap">
+
+		<figure class="hero-shot">
+			<img class="shot" src="images/cineditor-hero.png" alt="Cinematic Editor" width="1200" height="560">
+			<figcaption>Replace with: a wide, graded shot with the letterbox on — the best-looking frame you have.</figcaption>
+		</figure>
+
+		<div class="mod-head">
+			<h2>Cinematic Editor</h2>
+			<span class="badge">v1.24.0</span>
+		</div>
+
+		<p class="lede">
+			Fly a camera along a keyframed path, record a fight and replay it as ghosts so you can
+			frame the shot after it happened, grade the picture with a library of effects, and export
+			the result as video. Client-side only — nothing is sent to the server.
+		</p>
+
+		<ul class="features">
+			<li>
+				<h3>Detached camera</h3>
+				<p>Driven by a client-only entity, so your player never moves and the server sees
+					nothing. Physical fly and walk modes are there when you want to be in shot.</p>
+			</li>
+			<li>
+				<h3>Keyframed paths</h3>
+				<p>Position, rotation and field of view on independent tracks, along Catmull-Rom
+					splines with per-side easing.</p>
+			</li>
+			<li>
+				<h3>Replay</h3>
+				<p>Records every player once a tick, with their skins, armour, held items, swings and
+					hit reactions. Runs on the timeline clock or one of its own.</p>
+			</li>
+			<li>
+				<h3>Tracking &amp; follow</h3>
+				<p>Aim at a chosen player with a blendable weight, ride along at a set distance, or
+					generate a perfect orbit around anything.</p>
+			</li>
+			<li>
+				<h3>37 effects</h3>
+				<p>Grading, bloom, anamorphic streaks, lens flare, motion trails, painterly, outline,
+					grain, FXAA. Every one of them keyframable.</p>
+			</li>
+			<li>
+				<h3>Subject masking</h3>
+				<p>Any shader effect can be limited to one person, or to everything except them —
+					monochrome world, subject in colour.</p>
+			</li>
+			<li>
+				<h3>World capture</h3>
+				<p>Writes the terrain of a fight into a new save, so a replay carries its own world and
+					can be reframed months later.</p>
+			</li>
+			<li>
+				<h3>Video export</h3>
+				<p>PNG sequence or straight into ffmpeg. Fixed timestep, so a slow encoder makes the
+					export longer rather than dropping frames.</p>
+			</li>
+		</ul>
+
+		<div class="gallery">
+			<figure>
+				<img class="shot" src="images/cineditor-timeline.png" alt="The timeline editor" width="800" height="450">
+				<figcaption>Replace with: the editor panel open, showing the timeline with keyframes on it.</figcaption>
+			</figure>
+			<figure>
+				<img class="shot" src="images/cineditor-effects.png" alt="The effects sidebar" width="800" height="450">
+				<figcaption>Replace with: the effects sidebar open with a strong look applied — bloom or anamorphic.</figcaption>
+			</figure>
+			<figure>
+				<img class="shot" src="images/cineditor-replay.png" alt="Replay ghosts" width="800" height="450">
+				<figcaption>Replace with: replay ghosts mid-fight, ideally with skins and armour visible.</figcaption>
+			</figure>
+		</div>
+
+		<table class="keys">
+			<thead>
+				<tr><th>Key</th><th>Action</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>F8</td><td>Open the editor</td></tr>
+				<tr><td>F7</td><td>Toggle the free camera</td></tr>
+				<tr><td>F9</td><td>Add a keyframe</td></tr>
+				<tr><td>F6</td><td>Start / stop recording players</td></tr>
+				<tr><td>F10</td><td>Play / stop the timeline</td></tr>
+				<tr><td>F4</td><td>Enable / disable the whole mod</td></tr>
+			</tbody>
+		</table>
+
+		<div class="actions">
+			<a class="btn primary" data-repo="cinematic-editor" data-kind="release">Download the latest jar</a>
+			<a class="btn" data-repo="cinematic-editor" data-kind="source">Source on GitHub</a>
+			<span class="req">Requires Forge 11.15.1.2318+ for 1.8.9</span>
+		</div>
+
+	</div>
+</section>
+
+<!-- ============================================================ Mason -->
+
+<section class="mod" id="mason">
+	<div class="wrap">
+
+		<figure class="hero-shot">
+			<img class="shot" src="images/mason-hero.png" alt="Mason" width="1200" height="560">
+			<figcaption>Replace with: a large build or terrain shot with the selection box visible over it.</figcaption>
+		</figure>
+
+		<div class="mod-head">
+			<h2>Mason</h2>
+			<span class="badge">v0.8.0</span>
+		</div>
+
+		<p class="lede">
+			Visual world editing: selections you can see, weighted block palettes, region operations,
+			terrain brushes, a clipboard with rotation, portable schematics and undo. Roughly what a
+			world editor gives you, with a panel instead of a command line.
+		</p>
+
+		<div class="notice" style="margin-top:0;margin-bottom:32px">
+			<strong>Singleplayer only.</strong>
+			A hard limit rather than a missing feature — a client mod cannot edit a server's world.
+			Everything here writes through the integrated server, which only exists when you are the
+			one hosting.
+		</div>
+
+		<ul class="features">
+			<li>
+				<h3>Visible selections</h3>
+				<p>Two corners set from anywhere you can see, not just within reach. Box, sphere or
+					cylinder, each drawn as its own outline, through walls.</p>
+			</li>
+			<li>
+				<h3>Weighted palettes</h3>
+				<p>70% stone, 20% cobble, 10% andesite reads as rock. One block reads as one block.</p>
+			</li>
+			<li>
+				<h3>Block browser</h3>
+				<p>Every block state in the game, searchable and sorted, named the way the creative
+					menu names them - air included, so you can fill only the gaps.</p>
+			</li>
+			<li>
+				<h3>Region operations</h3>
+				<p>Fill, erase, replace, cut one material to air, hollow, walls, shell and stack — all
+					following the selected shape.</p>
+			</li>
+			<li>
+				<h3>Brushes</h3>
+				<p>Paint, erase, replace, surface coat, and a top-layer mode that follows a hillside
+					instead of painting a flat disc across it. Width, height and angle set separately,
+					and every brush can be clipped to the selection.</p>
+			</li>
+			<li>
+				<h3>Terrain sculpting</h3>
+				<p>A Gaussian smooth over the surface height map, flatten toward the height you
+					clicked, and carve or raise a soft-edged dome, all at a strength you set.</p>
+			</li>
+			<li>
+				<h3>Clipboard</h3>
+				<p>Copy, paste, rotate and flip, with stairs and doors turning along with the build.</p>
+			</li>
+			<li>
+				<h3>Schematics</h3>
+				<p>Save a build to disk and paste it into a different world. Stored by block name, so
+					it survives a different mod list.</p>
+			</li>
+			<li>
+				<h3>Undo</h3>
+				<p>24 steps, up to two million changed blocks each. One brush stroke is one step.</p>
+			</li>
+		</ul>
+
+		<div class="gallery">
+			<figure>
+				<img class="shot" src="images/mason-panel.png" alt="The editor panel" width="800" height="450">
+				<figcaption>Replace with: the docked panel scrolled to the Region section, with a selection beside it.</figcaption>
+			</figure>
+			<figure>
+				<img class="shot" src="images/mason-brush.png" alt="Sculpting terrain" width="800" height="450">
+				<figcaption>Replace with: mid-brush-stroke on terrain — before and after would be even better.</figcaption>
+			</figure>
+			<figure>
+				<img class="shot" src="images/mason-blocks.png" alt="The block browser" width="800" height="450">
+				<figcaption>Replace with: the block browser with a search typed in, showing real block names.</figcaption>
+			</figure>
+		</div>
+
+		<table class="keys">
+			<thead>
+				<tr><th>Key</th><th>Action</th></tr>
+			</thead>
+			<tbody>
+				<tr><td>B</td><td>Enter / leave editor mode</td></tr>
+				<tr><td>N</td><td>Open the panel</td></tr>
+				<tr><td>V</td><td>Arm / disarm the brush</td></tr>
+				<tr><td>] / [</td><td>Bigger / smaller brush</td></tr>
+				<tr><td>Z / X</td><td>Set corner 1 / corner 2</td></tr>
+			</tbody>
+		</table>
+
+		<div class="actions">
+			<a class="btn primary" data-repo="mason" data-kind="release">Download the latest jar</a>
+			<a class="btn" data-repo="mason" data-kind="source">Source on GitHub</a>
+			<span class="req">Requires Forge 11.15.1.2318+ for 1.8.9</span>
+		</div>
+
+	</div>
+</section>
+
+<!-- ============================================================ About -->
+
+<footer id="about">
+	<div class="wrap">
+		<p>
+			Both mods are released under the
+			<a href="https://www.gnu.org/licenses/gpl-3.0.html">GNU General Public License v3.0</a>.
+			You may use, change and share them freely, and anything built on them has to stay free
+			under the same terms.
+		</p>
+		<p>
+			They are independent implementations written from scratch against the 1.8.9 source. No
+			code or assets from any other project are included — each jar contains only its own
+			classes and resources.
+		</p>
+		<p class="disclaimer">
+			Not an official Minecraft product. Not approved by or associated with Mojang or Microsoft.
+		</p>
+	</div>
+</footer>
+
+<!-- Fills in the GitHub links above from the username in projects.js. -->
+<script src="projects.js"></script>
+<script src="hub.js"></script>
+</body>
+</html>
